@@ -1,0 +1,974 @@
+@charset "utf-8";
+
+ * {
+  box-sizing: border-box;
+}
+
+/* サイト全体 */
+body {
+  font-family: "Noto Sans JP", sans-serif;/* 文字の種類 */
+  font-size: 20px; /* 文字サイズ */
+  line-height: 1.5; /* 文字の行間（上下の高さ） */
+  color: #333333; /* 文字の色 */
+  background-color: #ffffff; /* 背景の色 */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 見出し */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0; /* 上の余白 */
+  margin-bottom: 30px; /* 下の余白 */
+  line-height: 1.2; /* 文字の行間（上下の高さ） */
+}
+
+/* リンク */
+a {
+  color: #333333; /* 文字の色 */
+  text-decoration: none; /* 文字の下線をなくす */
+  transition: color 0.3s;
+}
+/* リンクのホバー時 */
+a:hover {
+  text-decoration: underline; /* 文字の下線をつける */
+  color: #4ED8D8;
+}
+
+/* 段落 */
+p {
+  margin-top: 0; /* 上の余白 */
+  margin-bottom: 25px; /* 下の余白 */
+}
+
+/* リスト */
+ul {
+  padding: 0; /* リストの内側余白を消す */
+  margin-top: 0; /* 上の余白 */
+  margin-bottom: 20px; /* 下の余白 */
+  list-style: none; /* リストの左につくマークを消す */
+}
+
+/* 画像を入れるためのもの */
+figure {
+  margin: 0; /* 上下左右の余白 */
+}
+
+/* 画像 */
+img {
+  max-width: 100%; /* 最大の横幅 */
+  height: auto; /* 高さを横幅に応じて自動で変える */
+  vertical-align: middle; /* 上下揃えを中央 */
+}
+
+/* 住所や連絡先 */
+address {
+  font-style: normal; /* 斜めになっている文字を通常の文字にする */
+}
+/*---------------------------------------------------------
+ *
+ * ここまで
+ * 初期スタイル調整
+ *
+ *---------------------------------------------------------*/
+
+/* ヘッダー */
+.header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #63d4f5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 90%;
+}
+.logo {
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+.navList {
+    display: flex;
+}
+.navItem {
+    margin: 0 20px;
+    font-size: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.hamburger {
+        display: none;
+    }
+
+/* メインtop section1 */
+.section {
+    margin-bottom: 50px;
+}
+.section1 {
+    background-image:linear-gradient(to right, #8a63d2, #4ed8d8);
+    color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 130px;
+}
+
+.section1 h2,
+.section5 h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.section1 p,
+.section5 p {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* メインQuestion section2 */
+.section2 {
+    margin-bottom: 100px;
+}
+.section2 h2,
+.center {
+    text-align: center;
+    line-height: 2;
+}
+.h2ligntblue {
+    color: #8976E0;
+    text-shadow: 1px 1px 3px #81aaaa;
+}
+.concern {
+    background-color: #f3f4f6;
+    width: 65%;
+    padding: 50px;
+    margin-left: 20%;
+    margin-right: 25%;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.concern p::before {
+    content: 'check_circle';
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.3em;
+    color: rgb(252, 141, 141);
+    margin-right: 8px;
+    vertical-align: middle;
+    font-variation-settings:
+    'FILL' 0, 'wght' 400;
+}
+
+
+/* メインStrong Point section3 */
+.section3 {
+    background-color: #f3f4f6;
+    padding: 50px;
+}
+.sec3heading h2 {
+    text-align: center;
+}
+.strongPoint {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+.strongItem {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.strongImage {
+    text-align: center;
+}
+.strongImage1 img {
+    background-color: #e6fefe;
+    border-radius: 50%;
+    padding: 20px
+}
+.strongImage2 img {
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    padding: 20px;
+}
+.strongImage3 img {
+    background-color: #fbf9d6;
+    border-radius: 50%;
+    padding: 20px;
+}
+.strongImage4 img {
+    background-color: #e5e7eb;
+    border-radius: 50%;
+    padding: 20px;
+}
+.strongItem h3,
+.strongItem p {
+    text-align: center;
+}
+
+/* メインcourse intro section4 */
+.courseInfo1 h2 {
+    text-align: center;
+}
+.courseContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.courseIntro1 {
+    background-color: #e6fefe;
+    width: 24%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.courseIntro2 {
+    background-color: #f3e8ff;
+    width: 24%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.courseIntro3 {
+    background-color: #fbf9d6;
+    width: 24%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.courseIntro4 {
+    background-color: #e5e7eb;
+    width: 24%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.courseDetail {
+    background-color: white;
+}
+.courseImage1 img,
+.courseDetail1 a{
+    background-color: #9afaf4;
+}
+.courseImage1 img {
+    border: 1px solid none;
+    border-radius: 50%;
+}
+.courseImage2 img,
+.courseDetail2 a{
+    background-color: #dec1fd;
+}
+.courseImage2 img {
+    border: 1px solid none;
+    border-radius: 50%;
+}
+.courseImage3 img,
+.courseDetail3 a{
+    background-color: #fbf58b;
+}
+.courseImage3 img {
+    border: 1px solid none;
+    border-radius: 50%;
+}
+.courseImage4 img,
+.courseDetail4 a{
+    background-color: #c3c5c9;
+}
+.courseImage4 img {
+    border: 1px solid none;
+    border-radius: 50%;
+}
+.courseIntro h3,
+.courseIntro p,
+.courseDetail,
+.courseImage {
+    text-align: center;
+}
+.courseDetail a {
+    display: block;
+    margin-top: 20px;
+    padding: 12px;
+
+    color: #333333;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.courseDetail a:hover {
+    background-color: #ffffff;
+    text-decoration: none;
+}
+.courseImage {
+    text-align: center;
+}
+.section5 {
+    background-image:linear-gradient(to right, #8a63d2, #4ed8d8);
+    color: #ffffff;
+    padding: 50px 0;
+}
+.section5 h2,
+.section5 p,
+.apply {
+    text-align: center;
+}
+.apply a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #f7e562;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opasity 0.3s;
+}
+.apply a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+/* フッダー */
+.footer {
+    background-color: white;
+    }
+.footer-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    align-items: center;
+}
+.footerItem1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    padding-left: 25%;
+}
+.footerItem2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.footerItem3 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+.footerItem4 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+.footerItem5 {
+    grid-row: 2/3;
+    grid-column: 2/5;
+}
+.corpname {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+}
+.corpname::after {
+    content: 'emoji_nature';
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-size: 1.7em;
+    color: #8c82f2;
+    margin-left: 8px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}
+#pageTop {
+    /* display: none; */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background-color: #8c82f2;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding-left: 20px;
+}
+#pageTop:not(.show) {
+    display: none;
+}
+
+
+/* course page */
+.course {
+    padding: 75px 0;
+}
+.course1 {
+    background-image: linear-gradient(to right, #34d399, #22d3ee);
+    margin-top: 130px;
+}
+.course h2,
+.course p {
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+}
+.course h2 {
+    font-size: 50px;
+}
+.course p {
+    font-size: 21px;
+}
+.courseInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+.course-intro h3,
+.course-intro p {
+    text-align: center;
+}
+.course-intro h3 {
+    font-size: 25px;
+    padding-top: 20px;
+}
+.lessonTitle {
+    font-weight: bold;
+}
+.course-intro1 {
+    background-color: #e6fefe;
+    border-radius: 10%;
+}
+.course-intro2 {
+    background-color: #f3e8ff;
+    border-radius: 10%;
+}
+.course-intro3 {
+    background-color: #fbf9d6;
+    border-radius: 10%;
+}
+.course-intro4 {
+    background-color: #e5e7eb;
+    border-radius: 10%;
+}
+.courseImage img {
+    margin: 20px 0;
+}
+/* seminar page */
+.semIntro h2,
+.semIntro p {
+    text-align: center;
+    padding: 30px 0;
+}
+.senIntro h2 {
+    font-size: 40px;
+}
+.semIntro p {
+    font-size: 21px;
+}
+.semIntro1 {
+    background-image:linear-gradient(to right, #8a63d2, #4ed8d8);
+    color: #ffffff;
+    margin-top: 130px;
+}
+.semIntro1 p {
+    font-size: 30x;
+    line-height: 3;
+    font-weight: bold;
+}
+.seminar {
+    margin: 20px;
+    text-align: center;
+}
+.seminar1 {
+    background-color: #f3f4f6;
+    padding: 30px 0;
+}
+.step {
+    font-weight: bold;
+}
+.formGridSemi {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 40px;
+}
+.formGroupSemi {
+    width: 90%;
+}
+.applyformLabel p {
+    padding-bottom: 20px;
+}
+.classBtn {
+    margin: 0 40%;
+}
+button {
+    background-color: #f7e562;
+    color: #333333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #e6d94f;
+}
+/* corp page */
+.corpInfo {
+    max-width: 1000px;
+    margin: 130px auto 100px;
+    padding: 0 40px;
+}
+.corpInfo h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+.corpInfo h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #8A63D2, #4ED8D8);
+    border-radius: 2px;
+}
+.corpInfo article p {
+    line-height: 2;
+}
+.corpInfo > img {
+    flex-shrink: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.corpInfo:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.corpInfo:nth-of-type(4) {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.corpProfile {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0;
+}
+.corpProfile th,
+.corpProfile td {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.corpProfile th {
+    width: 25%;
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.historyDl {
+    position: relative;
+    padding-left: 40px;
+}
+
+
+.historyDl dt {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* タイムラインの丸マーカー */
+.historyDl dt::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #4ED8D8; /* ロゴの水色 */
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #4ED8D8;
+}
+
+.historyDl dd {
+    margin-left: 0;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* .schoolImgクラス内のdivに対してスタイルを適用 */
+  .schoolImg div {
+    display: flex;          /* 1. 子要素（img）を横並びにする */
+    gap: 16px;              /* 2. 画像間の隙間を指定 */
+    /* flex-wrap: wrap;        3. 親要素の幅を超える場合に折り返すレスポンシブには必要 */
+    justify-content: center;/* 4. （任意）中央揃えにする */
+  }
+
+  /* 画像自体のスタイル（任意） */
+  .schoolImg div img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+
+  .schoolImg div img:hover {
+    opacity:0.8;
+  }
+
+
+
+
+.corpInfo .instructor-grid { /* HTMLで<section>にこのクラスを追加してもOK */
+    display: grid;
+    gap: 40px; /* カードとカードの間の余白 */
+}
+
+/* --- 変更 --- */
+/* カード全体のレイアウトを grid-template-areas を使って定義します */
+.instructor-card {
+    display: grid;
+    /* "header"エリア(名前・コース)と"image"エリア(画像)、"body"エリア(詳細)を定義 */
+    grid-template-areas:
+        "header image"
+        "body   body";
+    /* [変更] 列の定義をより具体的にします。
+    左列(テキスト)は自動調整(auto)、右列(画像)は画像の幅である160pxに固定します。
+    これにより、Slickスライダー内でも幅の計算が正確に行われます。*/
+    grid-template-columns: 1fr 160px;
+    /* Slick高さ不揃い対策 */
+    height: 100%;
+    /* [追加] 予期せぬはみ出しを防止します。
+       Slickとの組み合わせで計算誤差が起きても、中身がカードの枠を越えなくなります。*/
+    overflow: hidden;
+    /* Slick自動設定対策 */
+    margin: 0 15px;
+
+    gap: 20px 30px; /* 行の隙間 と 列の隙間 */
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(142, 142, 178, 0.08);
+}
+
+.detail-button {
+    color: #708090;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    /* --- 追加/修正 --- */
+    /* クリックできることを示すためにカーソルスタイルを追加 */
+    cursor: pointer;
+}
+
+.detail-invisible {
+    display: none;
+}
+
+
+/* --- 変更 --- */
+/* grid-columnでの直接指定から、grid-areaでのエリア指定に変更します */
+.instructor-image {
+    grid-area: image; /* "image" エリアに配置 */
+    flex-shrink: 0;
+}
+.instructor-image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 4px #E6FBFB;
+}
+
+/* --- 追加 --- */
+/* HTMLで新しく追加したクラスに対するエリア指定 */
+.instructor-header {
+    grid-area: header; /* "header" エリアに配置 */
+}
+
+.instructor-body {
+    grid-area: body; /* "body" エリアに配置 */
+}
+
+
+/* --- 変更 --- */
+/* .instructor-details を、新しいクラス名(.instructor-header, .instructor-body)に書き換えます */
+.instructor-header dl,
+.instructor-body dl,
+.instructor-header dt,
+.instructor-body dt,
+.instructor-header dd,
+.instructor-body dd {
+    margin: 0;
+    padding: 0;
+}
+
+
+.instructor-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.course-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 999px;
+    color: #fff;
+}
+.course-tag.design { background-color: #4ED8D8; }
+.course-tag.frontend { background-color: #8A63D2; }
+.course-tag.backend { background-color: #F7E562; color: #333; }
+.course-tag.ai { background-color: #333; }
+
+
+/* --- 変更 --- */
+/* .instructor-details dt を、新しいクラスに合わせて具体的に指定します */
+.instructor-header dt,
+.instructor-body dt {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-left: 4px solid #8A63D2;
+}
+
+
+/* --- 追加 --- */
+/* レイアウト分割による不要な余白をリセットします */
+.instructor-header dl div:first-child dt,
+.instructor-body dt:first-of-type {
+    margin-top: 0;
+}
+
+
+/* --- 変更 --- */
+/* .instructor-details dd を、より汎用的な dd に変更し、マージンをリセットします */
+dd {
+    color: #555;
+    line-height: 1.8;
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+.skills-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+}
+.skills-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #4ED8D8;
+    font-weight: bold;
+}
+
+/* contact page */
+.contactHeading {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.contactHeading h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+
+.contactHeading h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #8A63D2, #4ED8D8); 
+    border-radius: 2px;
+}
+
+.contactHeading p {
+    line-height: 2;
+    color: #555;
+}
+
+form {
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.formGroup {
+    margin-bottom: 30px;
+}
+
+.formLabel {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.formLabel span {
+    color: #e53e3e;
+    margin-left: 5px;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"],
+.formGroup textarea,
+.formGroup select {
+    width: 75%;
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.formGroup textarea {
+    min-height: 150px;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+}
+
+.formGroup input[type="checkbox"] + label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.classBtn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.classBtn button {
+    display: inline-block;
+    padding: 15px 60px;
+    background: linear-gradient(135deg, #8A63D2, #4ED8D8);
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, transform 0.3s;
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+}
+
+.classBtn button:hover {
+    opacity: 0.85;
+}
+
+/*---------------------------------------------------------
+ *
+ * 幅768px以下のスタイル
+ * 上記のスタイルを上書きしていく
+ *
+ *---------------------------------------------------------*/
+ @media screen and (max-width: 768px) {
+    /* スマホナビゲーション用ハンバーガー、再表示 */
+    .grovalNav {
+        display: none;
+        position: absolute;
+        top: 100px;
+        background-color: white;
+        width: 50%;
+        right: 30px;
+        z-index: 10;
+    }
+
+    .grovalNav ul.navList {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .grovalNav li.navItem {
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .grovalNav li a {
+        display: block;
+        padding: 10px;
+        font-size: 15px;
+        border-bottom: 1px solid rgb(216, 86, 216);
+    }
+
+    .grovalNav.open {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        z-index: 20;
+        cursor: pointer;
+    }
+
+ }
+ 
